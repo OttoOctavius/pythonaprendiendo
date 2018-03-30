@@ -26,7 +26,7 @@ class MyHTMLParser(html.parser.HTMLParser):
         # Si el flag de lo que me interesa esta, hacer algo
         if self.flag == True:
             m = re.search('.doc', data) #'(?<=abc)def'
-            if m.__len__()>=1:#any(m.group(0)):
+            if not m is None:
                 print("Encontre algo util senpai.............")
         else:
             print("Encountered some data  :", data)
